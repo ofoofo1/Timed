@@ -6,19 +6,19 @@
 #   Visit: https://www.youtube.com/channel/UCiMTLB5vELIq3Dz9muBRfJw?view_as=subscriber#
 #=====================================================================================#
 
-name=(ShadowsockR ShadowsockR-Python ShadowsocksR ShadowsockR-Go ShadowsockR-libev)
+name=(ShadowsocksR ShadowsocksR-Python ShadowsocksR ShadowsocksR-Go ShadowsocksR-libev)
 path=/var/log
 [[ ! -d ${path} ]] && mkdir -p ${path}
-log=${path}/shadowsocksR-crond.log
+log=${path}/ShadowsocksR-crond.log
 
-shadowsockR_init[0]=/etc/init.d/shadowsockR
-shadowsockR_init[1]=/etc/init.d/shadowsockR-python
-shadowsockR_init[2]=/etc/init.d/shadowsockR-r
-shadowsockR_init[3]=/etc/init.d/shadowsockR-go
-shadowsockR_init[4]=/etc/init.d/shadowsockR-libev
+ShadowsocksR_init[0]=/etc/init.d/ShadowsocksR
+ShadowsocksR_init[1]=/etc/init.d/ShadowsocksR-python
+ShadowsocksR_init[2]=/etc/init.d/ShadowsocksR-r
+ShadowsocksR_init[3]=/etc/init.d/ShadowsocksR-go
+ShadowsocksR_init[4]=/etc/init.d/ShadowsocksR-libev
 
 i=0
-for init in "${shadowsockR_init[@]}"; do
+for init in "${ShadowsocksR_init[@]}"; do
     pid=""
     if [ -f ${init} ]; then
         ss_status=$(${init} status)
