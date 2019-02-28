@@ -6,7 +6,7 @@
 #   Visit: https://www.youtube.com/channel/UCiMTLB5vELIq3Dz9muBRfJw?view_as=subscriber#
 #=====================================================================================#
 
-name=(shadowsocksr shadowsocksr-Python ShadowsocksR ShadowsocksR-Go ShadowsocksR-libev)
+name=(shadowsocksr shadowsocksr-Python shadowsocksr shadowsocksr-Go shadowsocksr-libev)
 path=/var/log
 [[ ! -d ${path} ]] && mkdir -p ${path}
 log=${path}/shadowsocksr-crond.log
@@ -21,9 +21,9 @@ i=0
 for init in "${shadowsocksr_init[@]}"; do
     pid=""
     if [ -f ${init} ]; then
-        ss_status=$(${init} status)
+        sr_status=$(${init} status)
         if [ $? -eq 0 ]; then
-            pid=$(echo "$ss_status" | sed -e 's/[^0-9]*//g')
+            pid=$(echo "$sr_status" | sed -e 's/[^0-9]*//g')
         fi
 
         if [ -z "${pid}" ]; then
