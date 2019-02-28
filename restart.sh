@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #=====================================================================================#
 #   System Required:  CentOS, Debian, Ubuntu                                          #
-#   Description: Check ShadowsockR Server is running or not                           #
+#   Description: Check ShadowsocksR Server is running or not                           #
 #   Author: ComeBey for hasan w                                                       #
 #   Visit: https://www.youtube.com/channel/UCiMTLB5vELIq3Dz9muBRfJw?view_as=subscriber#
 #=====================================================================================#
